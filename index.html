@@ -19,7 +19,7 @@
     <link rel="alternative" href="/atom.xml" title="Pragmatic Idealist" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/favicon.ico">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -184,6 +184,7 @@
 <figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[mongodb-org-3.6]</span></span><br><span class="line"><span class="attr">name</span>=MongoDB Repository</span><br><span class="line"><span class="attr">baseurl</span>=https://repo.mongodb.org/yum/redhat/<span class="variable">$releasever</span>/mongodb-org/<span class="number">3.6</span>/x<span class="number">86_64</span>/</span><br><span class="line"><span class="attr">gpgcheck</span>=<span class="number">1</span></span><br><span class="line"><span class="attr">enabled</span>=<span class="number">1</span></span><br><span class="line"><span class="attr">gpgkey</span>=https://www.mongodb.org/static/pgp/server-<span class="number">3.6</span>.asc</span><br></pre></td></tr></table></figure>
 <p>随后运行安装命令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y mongodb-org</span><br></pre></td></tr></table></figure>
+<p>&lt;!– more –&gt;</p>
 <h2 id="关闭SELinux"><a href="#关闭SELinux" class="headerlink" title="关闭SELinux"></a>关闭SELinux</h2><p>之前在Azure的Ubuntu的服务器上好像没有遇到过这个问题。公司里的CentOS7镜像默认是 <code>enforcing</code> 模式。</p>
 <p>简单带各位回顾一下今早踩过的一个坑：</p>
 <p>同事之前帮忙部署了一台mongodb实例，数据文件是从之前一台已经弃用的服务器上scp拷贝过来的。我今天计划想把这台实例加固一下，首先就升级了系统然后reboot。没想到重启之后，mongodb的实例就没有自动启动起来。尝试使用 <code>systemctl start mongod</code> 就报错。追查到 <code>/var/log/mongodb/mongod.log</code> 中，就发现是访问磁盘路径时报了权限错误。这我就纳闷了，我只是重启了一下机器，怎么正常的启动脚本就失效了呢？</p>
@@ -251,7 +252,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/16/CentOS7中安装MongoDB/">Read all.. >></a>
+          <a class="article-more-a" href="/2018/04/16/CentOS7中安装MongoDB/">阅读全文 >></a>
         </p>
       
 
@@ -366,7 +367,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/11/IPTables-HowTos/">Read all.. >></a>
+          <a class="article-more-a" href="/2018/04/11/IPTables-HowTos/">阅读全文 >></a>
         </p>
       
 
@@ -468,7 +469,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/11/JKOM-CentOS-VM-Setup/">Read all.. >></a>
+          <a class="article-more-a" href="/2018/04/11/JKOM-CentOS-VM-Setup/">阅读全文 >></a>
         </p>
       
 
@@ -525,7 +526,7 @@
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
-		open_in_new: false,
+		open_in_new: true,
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: false,
