@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Pragmatic Idealist">
 <meta property="og:description" content="This article describes the steps of initiating a CentOS VM normally used with JKOM’s private network. Here are the technical requirements:  create user jk with root privilage disable root login from r">
 <meta property="og:locale" content="cn">
-<meta property="og:updated_time" content="2018-04-11T10:12:47.516Z">
+<meta property="og:updated_time" content="2018-06-14T07:02:10.223Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JKOM CentOS VM Setup">
 <meta name="twitter:description" content="This article describes the steps of initiating a CentOS VM normally used with JKOM’s private network. Here are the technical requirements:  create user jk with root privilage disable root login from r">
@@ -187,6 +187,7 @@
 <li>python 3.6</li>
 <li>node 8.9.3</li>
 </ul>
+<a id="more"></a>
 <h2 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh root@server_ip_address</span><br></pre></td></tr></table></figure>
 <h3 id="Fix-locale-warning"><a href="#Fix-locale-warning" class="headerlink" title="Fix locale warning"></a>Fix locale warning</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/environment</span><br><span class="line"></span><br><span class="line"><span class="comment"># add these lines...</span></span><br><span class="line"></span><br><span class="line">LANG=en_US.utf-8</span><br><span class="line">LC_ALL=en_US.utf-8</span><br></pre></td></tr></table></figure>
 <p>re-login</p>
