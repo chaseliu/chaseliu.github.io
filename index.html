@@ -174,8 +174,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天在思考如何在Linux服务器上不依赖<code>PM2</code>部署直接部署Python Web服务时，碰巧搜到的这片文章。作为一片入门教程，作者给出了非常明确的思路和操作示例，并在字里行间和文末明列出了推荐阅读材料。为推荐给各位阅读，这里我做了全文的复制，原文出处：<a href="https://blog.codeship.com/running-node-js-linux-systemd/" target="_blank" rel="noopener">https://blog.codeship.com/running-node-js-linux-systemd/</a></p>
-<p>感谢作者<a href="https://blog.codeship.com/author/lukebond/" target="_blank" rel="noopener">Luke Bond</a>。以下是原文：</p>
+        <p>今天在思考如何在Linux服务器上不依赖<code>PM2</code>部署直接部署Python Web服务时，碰巧搜到的这片文章。作为一片入门教程，作者给出了非常明确的思路和操作示例，并在字里行间和文末明列出了推荐阅读材料。为推荐给各位阅读，这里我做了全文的复制，<a href="https://blog.codeship.com/running-node-js-linux-systemd/" target="_blank" rel="noopener">原文链接</a></p>
+<p>感谢作者<a href="https://blog.codeship.com/author/lukebond/" target="_blank" rel="noopener">Luke Bond</a>，有机会我会将全文翻译成中文。</p>
 <hr>
 <p>The Node.js community has embraced process monitoring tools such as <a href="http://pm2.keymetrics.io/" target="_blank" rel="noopener">PM2</a>, <a href="http://nodemon.io/" target="_blank" rel="noopener">Nodemon</a>, and <a href="https://github.com/foreverjs/forever" target="_blank" rel="noopener">Forever</a>, which is understandable. For example, in addition to process monitoring, PM2 also boasts features around logging and port-sharing or clustering.</p>
 <p>However, I’m a firm believer in using the Linux init system for process monitoring. In this blog post, I’ll show you how to recreate process management, logging and clustering functionality using the Linux init system, systemd, and I’ll make the case for this being a superior approach.</p>
