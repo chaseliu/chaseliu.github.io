@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://chaseliu.github.io">
   <title>Running Node.js on Linux with systemd | Pragmatic Idealist</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天在思考如何在Linux服务器上不依赖PM2部署直接部署Python Web服务时，碰巧搜到的这片文章。作为一片入门教程，作者给出了非常明确的思路和操作示例，并在字里行间和文末明列出了推荐阅读材料。为推荐给各位阅读，这里我做了全文的复制，原文链接 感谢作者Luke Bond，有机会我会将全文翻译成中文。  The Node.js community has embraced process mo">
-<meta name="keywords" content="linux,nodejs">
+  <meta name="description" content="今天在思考如何在Linux服务器上不依赖PM2部署直接部署Python Web服务时，碰巧搜到的这片文章。作为一片入门教程，作者给出了非常明确的思路和操作示例，并在字里行间和文末明列出了推荐阅读材料。为推荐给各位阅读，这里我做了全文的复制，原文链接。 感谢作者Luke Bond，有机会我会将全文翻译成中文。  The Node.js community has embraced process m">
+<meta name="keywords" content="sysadmin,deployment,nodejs">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Running Node.js on Linux with systemd">
 <meta property="og:url" content="http://chaseliu.github.io/2018/06/14/Running-Node-js-on-Linux-with-systemd/index.html">
 <meta property="og:site_name" content="Pragmatic Idealist">
-<meta property="og:description" content="今天在思考如何在Linux服务器上不依赖PM2部署直接部署Python Web服务时，碰巧搜到的这片文章。作为一片入门教程，作者给出了非常明确的思路和操作示例，并在字里行间和文末明列出了推荐阅读材料。为推荐给各位阅读，这里我做了全文的复制，原文链接 感谢作者Luke Bond，有机会我会将全文翻译成中文。  The Node.js community has embraced process mo">
+<meta property="og:description" content="今天在思考如何在Linux服务器上不依赖PM2部署直接部署Python Web服务时，碰巧搜到的这片文章。作为一片入门教程，作者给出了非常明确的思路和操作示例，并在字里行间和文末明列出了推荐阅读材料。为推荐给各位阅读，这里我做了全文的复制，原文链接。 感谢作者Luke Bond，有机会我会将全文翻译成中文。  The Node.js community has embraced process m">
 <meta property="og:locale" content="cn">
-<meta property="og:updated_time" content="2018-06-14T07:01:18.327Z">
+<meta property="og:updated_time" content="2018-06-14T07:07:21.506Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Running Node.js on Linux with systemd">
-<meta name="twitter:description" content="今天在思考如何在Linux服务器上不依赖PM2部署直接部署Python Web服务时，碰巧搜到的这片文章。作为一片入门教程，作者给出了非常明确的思路和操作示例，并在字里行间和文末明列出了推荐阅读材料。为推荐给各位阅读，这里我做了全文的复制，原文链接 感谢作者Luke Bond，有机会我会将全文翻译成中文。  The Node.js community has embraced process mo">
+<meta name="twitter:description" content="今天在思考如何在Linux服务器上不依赖PM2部署直接部署Python Web服务时，碰巧搜到的这片文章。作为一片入门教程，作者给出了非常明确的思路和操作示例，并在字里行间和文末明列出了推荐阅读材料。为推荐给各位阅读，这里我做了全文的复制，原文链接。 感谢作者Luke Bond，有机会我会将全文翻译成中文。  The Node.js community has embraced process m">
   
     <link rel="alternative" href="/atom.xml" title="Pragmatic Idealist" type="application/atom+xml">
   
@@ -177,7 +177,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天在思考如何在Linux服务器上不依赖<code>PM2</code>部署直接部署Python Web服务时，碰巧搜到的这片文章。作为一片入门教程，作者给出了非常明确的思路和操作示例，并在字里行间和文末明列出了推荐阅读材料。为推荐给各位阅读，这里我做了全文的复制，<a href="https://blog.codeship.com/running-node-js-linux-systemd/" target="_blank" rel="noopener">原文链接</a></p>
+        <p>今天在思考如何在Linux服务器上不依赖<code>PM2</code>部署直接部署Python Web服务时，碰巧搜到的这片文章。作为一片入门教程，作者给出了非常明确的思路和操作示例，并在字里行间和文末明列出了推荐阅读材料。为推荐给各位阅读，这里我做了全文的复制，<a href="https://blog.codeship.com/running-node-js-linux-systemd/" target="_blank" rel="noopener">原文链接</a>。</p>
 <p>感谢作者<a href="https://blog.codeship.com/author/lukebond/" target="_blank" rel="noopener">Luke Bond</a>，有机会我会将全文翻译成中文。</p>
 <hr>
 <p>The Node.js community has embraced process monitoring tools such as <a href="http://pm2.keymetrics.io/" target="_blank" rel="noopener">PM2</a>, <a href="http://nodemon.io/" target="_blank" rel="noopener">Nodemon</a>, and <a href="https://github.com/foreverjs/forever" target="_blank" rel="noopener">Forever</a>, which is understandable. For example, in addition to process monitoring, PM2 also boasts features around logging and port-sharing or clustering.</p>
@@ -283,7 +283,7 @@
 <li><a href="https://www.youtube.com/watch?v=hiW8eIdcRgo&amp;list=PLlh6TqkU8kg_3FpXLlHMnoVqKZysIzXlK&amp;index=6" target="_blank" rel="noopener">The creator of systemd talking about security features</a></li>
 <li><a href="https://www.youtube.com/channel/UCvq_RgZp3kljp9X8Io9Z1DA" target="_blank" rel="noopener">Videos from systemd conf 2015</a></li>
 <li><a href="https://www.freedesktop.org/software/systemd/man/systemd.unit.html" target="_blank" rel="noopener">systemd man pages – unit</a></li>
-<li>[systemd man pages – service</li>
+<li><a href="https://www.freedesktop.org/software/systemd/man/systemd.service.html" target="_blank" rel="noopener">systemd man pages – service</a></li>
 </ul>
 
       
@@ -298,7 +298,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">sysadmin</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">deployment</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
