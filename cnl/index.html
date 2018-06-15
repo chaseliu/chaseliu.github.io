@@ -61,16 +61,14 @@
 <link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=6.3.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png?v=6.3.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png?v=6.3.0">
 
-
-  <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
 
 
 
@@ -108,18 +106,18 @@
 
 
 
-  <meta name="description" content="div.bg {     background-color: #eae7d9;     padding: 150px 0px;     border-radius: 4px;     text-align: center;   }   table, td, tr {     border: 0px;     border-collapse: collapse;     text-al">
+  <meta name="description" content="p {     color: #7d8877;     margin: 40px 0px 10px 0px;   }   img {     max-width: 300px;     border: 0px !important;   }   div.bg {     background-color: #eae7d9;     padding: 100px 20px;     b">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{ C &amp; L }">
 <meta property="og:url" content="http://chaseliu.github.io/cnl/index.html">
 <meta property="og:site_name" content="Pragmatic Idealist">
-<meta property="og:description" content="div.bg {     background-color: #eae7d9;     padding: 150px 0px;     border-radius: 4px;     text-align: center;   }   table, td, tr {     border: 0px;     border-collapse: collapse;     text-al">
+<meta property="og:description" content="p {     color: #7d8877;     margin: 40px 0px 10px 0px;   }   img {     max-width: 300px;     border: 0px !important;   }   div.bg {     background-color: #eae7d9;     padding: 100px 20px;     b">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://precisecare.blob.core.chinacloudapi.cn/static/octocats-v3.png">
-<meta property="og:updated_time" content="2018-06-14T16:46:00.000Z">
+<meta property="og:updated_time" content="2018-06-15T16:51:38.925Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{ C &amp; L }">
-<meta name="twitter:description" content="div.bg {     background-color: #eae7d9;     padding: 150px 0px;     border-radius: 4px;     text-align: center;   }   table, td, tr {     border: 0px;     border-collapse: collapse;     text-al">
+<meta name="twitter:description" content="p {     color: #7d8877;     margin: 40px 0px 10px 0px;   }   img {     max-width: 300px;     border: 0px !important;   }   div.bg {     background-color: #eae7d9;     padding: 100px 20px;     b">
 <meta name="twitter:image" content="https://precisecare.blob.core.chinacloudapi.cn/static/octocats-v3.png">
 
 
@@ -377,47 +375,66 @@
 
 <head>
 <style type="text/css">
+  p {
+    color: #7d8877;
+    margin: 40px 0px 10px 0px;
+  }
+  img {
+    max-width: 300px;
+    border: 0px !important;
+  }
   div.bg {
     background-color: #eae7d9;
-    padding: 150px 0px;
-    border-radius: 4px;
+    padding: 100px 20px;
+    border-radius: 8px;
     text-align: center;
   }
-  table, td, tr {
+  table.clock, td, tr {
     border: 0px;
     border-collapse: collapse;
     text-align: center;
   }
   table.clock {
     margin: auto;
-    max-width: 450px;
-    border-radius: 4px;
-    background-color: #dea897;
+    max-width: 400px;
+    background-color: #e9e6d8;
   }
   table.clock tr.clock-digits {
     line-height: 4.5em;
-    background-color: #dea897;
-    color: #397360;
+    background-color: #f7ead1;
+    color: #7d8877;
   }
   table.clock tr.clock-head td {
     font-size: 0.618em;
     padding: 2px;
-    color: #eae7d9;
-    background-color: #9d414f;
+    color: #f7ead1;
+    background-color: #dca997;
   }
-  table.clock tr.clock-digits td:nth-child(odd) {
-    font-size: 4em;
-    padding: 0px;
+  tr.clock-digits td:nth-child(odd) {
+    font-size: 3em;
+    padding: 5px 0px;
   }
-  table.clock tr.clock-digits td:nth-child(even) {
+  tr.clock-digits td:nth-child(even) {
     font-size: 2em;
     padding: 0px;
+  }
+  tr.clock-digits td:first-child {
+    border-bottom-left-radius: 8px;
+  }
+  tr.clock-digits td:last-child {
+    border-bottom-right-radius: 8px;
+  }
+  tr.clock-head td:first-child {
+    border-top-left-radius: 8px;
+  }
+  tr.clock-head td:last-child {
+    border-top-right-radius: 8px;
   }
 </style>
 </head>
 
 <div class="bg">
-    <img src="https://precisecare.blob.core.chinacloudapi.cn/static/octocats-v3.png" style="max-width:300px;border:0px;">
+    <img src="https://precisecare.blob.core.chinacloudapi.cn/static/octocats-v3.png">
     <p>I See You</p>
     <table id="known-clock" class="clock">
       <tr class="clock-head">
@@ -439,7 +456,28 @@
         <td class="clock-seconds">09</td>
       </tr>
     </table>
-    <p style="margin-top: 50px;">Wedding Countdown</p>
+    <p>Get Married</p>
+    <table id="married-clock" class="clock">
+      <tr class="clock-head">
+        <td>DAYS</td>
+        <td></td>
+        <td>HOURS</td>
+        <td></td>
+        <td>MINUTES</td>
+        <td></td>
+        <td>SECONDS</td>
+      </tr>
+      <tr class="clock-digits">
+        <td class="clock-days">800</td>
+        <td>:</td>
+        <td class="clock-hours">22</td>
+        <td>:</td>
+        <td class="clock-minutes">11</td>
+        <td>:</td>
+        <td class="clock-seconds">09</td>
+      </tr>
+    </table>
+    <p>Wedding Countdown</p>
     <table id="wedding-clock" class="clock">
       <tr class="clock-head">
         <td>DAYS</td>
@@ -482,8 +520,10 @@ function clock(dom, ts, countdown) {
 };
 
 var knownTs = new Date('2016-02-17T11:00:00Z');
+var marriedTs = new Date('2018-06-11T06:00:00Z');
 var weddingTs = new Date('2018-09-16T10:08:00Z');
 clock('#known-clock', knownTs);
+clock('#married-clock', marriedTs);
 clock('#wedding-clock', weddingTs, true);
 
 </script>
